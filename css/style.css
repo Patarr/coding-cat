@@ -1,0 +1,768 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*
+Fonts:
+font-family: 'Comfortaa', cursive;
+font-family: 'ArialNova-Light';
+*/
+
+/*Setup*/
+@font-face {
+    src: url(../fonts/ArialNova-Light.ttf);
+    font-family: 'ArialNova-Light';
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    background: #001652;
+}
+button{
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-size: 7.4rem;
+    line-height: 8.8rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 3.8rem;
+    line-height: 4.7rem;
+}
+h3{
+    font-size: 3rem;
+    line-height: 4.7rem;
+}
+h4{
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+p{
+    font-size: 2rem;
+    line-height: 3rem; 
+}
+
+/*CSS*/
+
+/*Navigation bar*/
+#mainNav{
+    max-width: 100%;
+    padding:  44px;
+    position: relative;
+}
+#navBlur{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #001652;
+    opacity: 0.3;
+    filter: blur(20px);
+}
+.widthCont{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#navMenu{
+    background: url('../assets/menu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 24px;
+    margin-top: 1.2rem;
+    margin-right: 3.3rem;
+    float: left;
+    display: none;
+}
+#navLogo{
+    width: 235px;
+}
+#logoBox{
+    float: left;
+}
+#arrow{
+    background-image: url('../assets/arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 10px;
+    float: right;
+    margin-left: 1rem;
+    margin-top: 0.7rem;
+}
+#navTextBox{
+    float: right;
+    margin-top: 10px;
+}
+#mainNav button{
+    text-transform: uppercase;
+}
+#mainNav ul{
+    display: inline-block;
+}
+#mainNav li{
+    display: inline;
+}
+#mainNav a{
+    font-size: 2.5rem;
+    margin-left: 4.2rem;
+    text-transform: uppercase;
+}
+#btn{
+    background: #AA64FF;
+    padding: 2rem 2.5rem;
+    border-radius: 49px;
+}
+#btnGroen{
+    background: #00FFDC;
+    padding: 2rem 2.5rem;
+    border-radius: 49px;
+    color: #3A3FA2;
+    font-weight: bold;
+}
+
+
+/*Header*/
+#mainHead{
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: relative;
+}
+#mainHead::before{
+    content: "";
+    background: #001652;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#headTextBox{
+    max-width: 829px;
+    position: absolute;
+    bottom: 150px;
+    padding: 44px;
+}
+#headTextBoxCoderen{
+    max-width: 829px;
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translate(-50%);  
+}
+#headTextBoxCoderen h1{
+    margin-bottom: 2rem;
+}
+#infoBox{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 3.3rem;
+    line-height: 3.7rem;
+    color: #00FFDC;
+}
+#leerlingen{
+    background: url('../assets/aantal-leerlingen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 34px;
+    float: left;
+    margin-right: 2rem;
+}
+#tijdsduur{
+    background: url('../assets/tijdsduur.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 43px;
+    height: 34px;
+    float: left;
+    margin-right: 2rem;
+}
+#tijd{
+    margin-top: 2.3rem;
+}
+
+
+
+
+
+/*Main*/
+
+/*Reportage*/
+main{
+    margin-top: 140px;
+}
+#reportageTextBox{
+    max-width: 854px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 44px;
+}
+#reportageTextBox span{
+    font-style: italic;
+}
+#reportageTextBox p{
+    margin-bottom: 5rem;
+}
+#vidPlayer{
+    width: 100%;
+    height: 715px;
+    background: lime;
+}
+
+
+/*Handleiding*/
+#handleidingTitelBox{
+    max-width: 884px;
+    margin: 0 auto;
+    text-align: center;
+}
+#handleidingTitelBox p{
+    font-family: 'ArialNova-Light';
+    margin-top: 6rem;
+}
+
+
+.handleidingContentBox{
+    width: 100%;
+    margin-top: 200px;
+}
+.head{
+    color: #3A3FA2;
+    font-size: 17rem;
+    font-weight: bold;
+    position: absolute;
+    z-index: -1;
+    top: -50px;
+}
+.handleidingContentText{
+    max-width: 550px;
+    position: relative;
+}
+.floatRight{
+    float: right;
+}
+.floatLeft{
+    float: left;
+}
+.handleidingContentText h2{
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
+.handleidingContentTutorial{
+    width: 600px;
+    height: 357px;
+    background: #00FFDC;
+}
+
+
+
+
+/*Bestel het pakket*/
+#pakket{
+    margin-top: 400px;
+}
+#pakketCont{
+    width: 100%;
+    height: 435px;
+    background: pink;
+    padding-top: 350px;
+}
+#pakketTextBox{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#pakketTextBox p{
+    font-family: 'ArialNova-Light';
+}
+#pakketTextBox button{
+    background: #00FFDC;
+    color: #3A3FA2;
+    padding: 35px 200px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+/*Ingebrepen in de workshop*/
+#inbegrepen{
+    margin-top: 400px;
+}
+#inbegrepenTextBox{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#inbegrepenTextBox p{
+    font-family: 'ArialNova-Light';
+    margin-top: 4rem;
+}
+
+
+
+/*Workshops*/
+#workshopTextBox{
+    text-align: center;
+    max-width: 854px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 44px;
+}
+#workshopTextBox p{
+    margin-top: 60px;
+}
+
+.workshopCont{
+    max-width: 1200px;
+    background: pink;
+    padding: 70px 60px;
+    border-radius: 56px;
+    margin-top: 100px;
+}
+#workshopContRight{
+    float: right;
+}
+
+.workshopContTextBox{
+    max-width: 500px;
+}
+.workshopContTextBox h2{
+    padding-bottom: 1.5rem;
+}
+.workshopContTextBox h4{
+    padding-bottom: 1rem;
+}
+.workshopContTextBox p{
+    font-family: 'ArialNova-Light';
+}
+.catEasy{
+    background: url('../assets/cat-easy.png');
+    background-size: contain;
+    width: 28px;
+    height: 29px;
+    float: right;
+    margin-right: 50%
+}
+.catMedium{
+    background: url('../assets/cat-medium.png');
+    background-size: contain;
+    background-repeat: space;
+    background-position: initial;
+    width: 62px;
+    height: 29px;
+    float: right;
+    margin-right: calc(50% - 34px);
+}
+.catHard{ 
+    background: url('../assets/cat-hard.png');
+    background-size: contain;
+    background-repeat: space;
+    background-position: initial;
+    width: 96px;
+    height: 29px;
+    float: right;
+    margin-right: calc(50% - 68px);
+}
+
+.easy{
+    color: #00FFDC;
+}
+.medium{
+    color: #FFFF64;
+}
+.hard{
+    color: #FFA338;
+}
+
+
+/*Reviews*/
+#reviewTextBox{
+    width: 100%;
+    text-align: center;
+    margin-top: 250px;
+}
+#reviewCarrouselBox{
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+/* #reviewCarrousel::-webkit-scrollbar{
+    display: none;
+} */
+
+.reviewContent{
+    width: 747px;
+    background: #AA64FF;
+    border-radius: 56px;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+.reviewContentBox{
+    padding: 45px 145px 80px 140px;  
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reviewCats3{
+    background: url('../assets/cat-easy.png');
+    background-size: contain;
+    background-repeat: space;
+    background-position: initial;
+    width: 201px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+.reviewCats4{
+    background: url('../assets/cat-easy.png');
+    background-size: contain;
+    background-repeat: space;
+    background-position: initial;
+    width: 260px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.reviewContentBox h2{
+    font-weight: bold;
+}
+.reviewContentBox p{
+    color: black;
+    opacity: 0.3;
+    margin-top: 2rem;
+}
+#dotsBox{
+    margin-top: 30px;
+}
+#reviewDots{
+    max-width: fit-content;
+    margin: 0 auto;
+}
+#reviewDots li{
+    margin-right: 10px;
+    width: 19px;
+    height: 10px;
+    border-radius: 10px;
+    background: #3A3FA2;
+    float: left;
+}
+#reviewDots li.slick-active{
+    margin-right: 10px;
+    width: 38px;
+    height: 10px;
+    border-radius: 10px;
+    background: #AA64FF;
+    float: left;
+}
+.slick-dots li button { 
+    font-size: 0; 
+ }
+
+
+
+
+
+ /*Wie zijn wij*/
+#wieZijnWijTextBox{
+    text-align: center;
+    width: 100%;
+    margin-top: 250px;
+}
+#wijContainer{
+    margin-top: 100px;
+    width: 100%;
+}
+.persoonBox{
+    max-width: 250px;
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.persoon{
+    width: 250px;
+    height: 250px;
+    background: #FFA338;
+    border-radius: 50%;
+}
+.persoonBoxText{
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 37px;
+}
+
+
+
+
+
+
+
+
+/*Downloads*/
+#download{
+    margin-top: 400px;
+}
+
+#downloadTextBox{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+#downloadTextBox p{
+    font-family: 'ArialNova-Light';
+    margin-top: 6rem;
+}
+#download button{
+    background: #3A3FA2;
+    padding: 35px 50px;
+    padding-left: 90px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-top: 67px;
+    position: relative;
+}
+#lock{
+    background: url('../assets/lock.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 39px;
+    position: absolute;
+    top: 25px;
+    left: 37px;
+}
+
+
+
+
+/*Footer*/
+#mainFooter{
+    width: 100%;
+    background: #3A3FA2;
+    position: relative;
+    margin-top: 400px;
+}
+#footerWidth{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+}
+#footerTextLeft{
+    float: left;
+}
+#footerTextRight{
+    float: right;
+    text-align: right;
+}
+#mainFooter li{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    cursor: pointer;
+}
+#footerLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    transform: translate(-50%, -50%);
+}
+#cats{
+    width: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+#catLeft{
+    max-width: 140px;
+    position: absolute;
+    left: 0;
+    top: -115px;
+}
+#catRight{
+    max-width: 140px;
+    position: absolute;
+    right: 0;
+    top: -118px;
+}
+#catMiddle{
+    max-width: 100px;
+    position: absolute;
+    left: 50%;
+    top: -135px;
+    transform: translate(-50%);
+}
+
+
+
+
+
+/*Media querry's*/
+@media screen and (max-width: 1200px){
+    #wijContainer{
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    .persoon#ylona{
+        float: right;
+    }
+    .persoon#douwe{
+        float: right;
+    }
+    #persoonClear{
+        clear: both;
+    }
+    .persoonBox{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 1180px){
+    #navTextBox{
+        display: none;
+    }
+    #navMenu{
+        display: block;
+    }
+}
+@media screen and (max-width: 940px){
+    h1{
+        font-size: 6rem;
+    }
+    #footerLogo{
+        display: none;
+    }
+}
+@media screen and (max-width: 817px){
+    #reviewCarrouselBox{
+        max-width: 90%;
+    }
+    .reviewContent{
+        width: calc(90vw);
+        margin-left: 0px;
+        margin-right: 0px
+    }
+
+}
+@media screen and (max-width: 720px){
+    h1{
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .reviewContent h2{
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+    .reviewCats4{
+        height: 30px;
+        width: 130px;
+        margin-bottom: 2rem;
+    }
+    .reviewCats3{
+        height: 30px;
+        width: 100px;
+        margin-bottom: 2rem;
+    }
+    .reviewContentBox{
+        padding-bottom: 45px;
+    }
+}
+@media screen and (max-width: 610px){
+    .catEasy{
+        margin-right: 40%;
+    }
+    .catMedium{
+        margin-right: calc(40% - 34px);
+    }
+    .catHard{
+        margin-right: calc(40% - 68px);
+    }
+}
+@media screen and (max-width: 600px){
+    #wijContainer{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 530px){
+    .reviewContentBox{
+        padding: 10%;
+    }
+}
+@media screen and (max-width: 520px){
+    .catEasy{
+        margin-right: 20%;
+    }
+    .catMedium{
+        margin-right: calc(20% - 34px);
+    }
+    .catHard{
+        margin-right: calc(20% - 68px);
+    }
+    .workshopContTextBox h2{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 490px){
+    #footerTextRight{
+        float: none;
+        text-align: left;
+    }
+    #footerTextLeft{
+        float: none;
+    }
+    #catLeft{
+        display: none;
+    }
+    #catRight{
+        display: none;
+    }
+}
+@media screen and (max-width: 425px){
+    .catEasy{
+        margin-right: calc(100% - 28px);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .catMedium{
+        margin-right: calc(100% - 62px);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .catHard{
+        margin-right: calc(100% - 96px);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
